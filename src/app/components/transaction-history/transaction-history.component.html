@@ -1,0 +1,64 @@
+<div class="container p-5">
+    <h2 class="mb-4">Transaction History</h2>
+    <div class="filters row align-items-end mb-4">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label class="mb-2">Type:</label>
+                <select [(ngModel)]="filterType" class="form-control">
+                    <option value="">All</option>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label class="mb-2">Category:</label>
+                <input class="form-control" type="text" [(ngModel)]="filterCategory" placeholder="Search Category">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label class="mb-2">Min Amount:</label>
+                <input type="number" [(ngModel)]="filterMinAmount" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label class="mb-2">Max Amount:</label>
+                <input class="form-control" type="number" [(ngModel)]="filterMaxAmount">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group d-flex" style="gap: 10px;">
+                <button (click)="applyFilters()" class="btn btn-primary mr-2">Apply</button>
+                <button (click)="clearFilters()" class="btn btn-dark">Reset</button>
+            </div>
+        </div>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Category</th>
+                <th>Expenses</th>
+                <th>Amount</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let txn of filteredTransactions">
+                <td>{{ txn.type }}</td>
+                <td>{{ txn.expensecategory }}</td>
+                <td>{{ txn.expense }}</td>
+                <td [ngClass]="{'text-success' : txn.type === 'income', 'text-danger' : txn.type === 'expense' }">{{ txn.amount | currency }}</td>
+                <td>{{ txn.date }}</td> 
+            </tr>
+        </tbody>
+        <tfoot *ngIf="filteredTransactions.length === 0">
+            <tr>
+              <td colspan="5" class="text-center">No data found!!!</td>
+            </tr>
+          </tfoot>
+    </table>
+</div>

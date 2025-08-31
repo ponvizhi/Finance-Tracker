@@ -1,0 +1,18 @@
+{
+  "budgets": [
+    {
+      "id": "0sxtl7nu5",
+      "budgetcategory": "Food",
+      "limit": 5000,
+      "currentSpent": 1500,
+      "uid": "5HaPlfRX2QcPofYDrX6hEUpeHwy2"
+    },
+    {
+      "id": "tjoyamfas",
+      "budgetcategory": "Rent",
+      "limit": 8500,
+      "currentSpent": 8500,
+      "uid": "5HaPlfRX2QcPofYDrX6hEUpeHwy2"
+    }
+  ]
+}

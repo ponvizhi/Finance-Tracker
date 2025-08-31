@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="card-wrapper">
+        <h2 class="mb-3">Add Expense</h2>
+        <div class="alert alert-success mb-4" *ngIf="submitted && successMessage">
+            {{successMessage}}
+        </div>
+        <div class="alert alert-danger mb-4" *ngIf="submitted && (addExpense.invalid || errorMessage)">
+            <small *ngIf="addExpense.invalid">one or more field is required</small>
+            <small *ngIf="errorMessage">{{errorMessage}}</small>
+        </div>
+        <form [formGroup]="addExpense" (ngSubmit)="onSubmit()">
+            <div class="form-group mb-3">
+                <label>Expense Name</label>
+                <input type="text" formControlName="expense" class="form-control">
+                <span class="text-danger d-block" *ngIf="addExpense.controls['expense'].errors?.['required'] && addExpense.controls['expense'].touched">Expense name is required</span>
+            </div>
+            <div class="form-group mb-3">
+                <label>Expense Category</label>
+                <select formControlName="expensecategory" class="form-control">
+                    <option default disabled>Select Expense Category</option>
+                    <ng-container *ngFor="let category of expenseCategories">
+                        <option [value]="category">{{ category }}</option>
+                    </ng-container>                    
+                </select>
+                <span class="text-danger d-block" *ngIf="addExpense.controls['expensecategory'].errors?.['required'] && addExpense.controls['expensecategory'].touched">Expense Category is required</span>
+            </div>
+            <div class="form-group mb-3">
+                <label>Amount</label>
+                <input type="number" formControlName="amount" class="form-control">
+                <span class="text-danger d-block" *ngIf="addExpense.controls['amount'].errors?.['required'] && addExpense.controls['amount'].touched">Amount is required</span>
+            </div>
+            <div class="form-group mb-3">
+                <label>Date</label>
+                <input type="date" formControlName="date" class="form-control">
+                <span class="text-danger d-block" *ngIf="addExpense.controls['date'].errors?.['required'] && addExpense.controls['date'].touched">Date is required</span>
+            </div>
+            <div class="form-group mb-3">
+                <label>Description</label>
+                <textarea formControlName="description" class="form-control"></textarea>
+            </div>
+            <button class="btn btn-dark">Submit</button>
+        </form>
+    </div>
+    <div class="mt-5">
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Expense</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                  </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let expenselist of expenseList">
+                    <td>{{expenselist.expense}}</td>
+                    <td>{{expenselist.expensecategory}}</td>
+                    <td>{{expenselist.amount}}</td>
+                    <td>{{expenselist.date}}</td>
+                    <td><button class="btn btn-danger" (click)="deleteExpense(expenselist.id)">Delete</button></td>
+                </tr>
+            </tbody>
+            <tfoot *ngIf="expenseList.length === 0">
+                <tr>
+                    <td colspan="4" class="text-center">No data found!!!</td>
+                  </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+

@@ -1,1 +1,310 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --bkg: 190 60% 98%;
+    --muted: 183 8% 55%;
+    --round-sm: 4px;
+    --round-md: 10px;
+    --round-lg: 25px;
+    --space-xl: 40px;
+    --text: 185 26% 9%;
+}
+:root{
+    --bs-bg-label-tint-amount: 84%;
+    --bs-border-subtle-amount: 61%;
+    --bs-base-color: #2f2b3d;
+    --bs-base-color-rgb: 47, 43, 61;
+    --bs-paper-bg: #fff;
+    --bs-paper-bg-rgb: 255, 255, 255;
+    --bs-min-contrast-ratio: 1.7;
+    --bs-box-shadow: 0 0.1875rem 0.75rem 0 rgba(47, 43, 61, 0.14);
+    --bs-box-shadow-xs: 0 0.0625rem 0.375rem 0 rgba(47, 43, 61, 0.1);
+    --bs-box-shadow-sm: 0 0.125rem 0.5rem 0 rgba(47, 43, 61, 0.12);
+    --bs-box-shadow-lg: 0 0.25rem 1.125rem 0 rgba(47, 43, 61, 0.16);
+    --bs-box-shadow-xl: 0 0.3125rem 1.875rem 0 rgba(47, 43, 61, 0.18);
+    --bs-floating-component-shadow: 0 0.31rem 1.25rem 0 #acaab1;
+    --bs-custom-link-color: var(--bs-primary);
+    --bs-navbar-bg: var(--bs-paper-bg);
+    --bs-navbar-box-shadow: 0 0 10px var(--bs-border-color);
+    --bs-navbar-border-width: 1px;
+    --bs-navbar-border-color: var(--bs-paper-bg);
+    --bs-menu-header-color: var(--bs-heading-color);
+    --bs-nav-box-shadow: var(--bs-box-shadow);
+    --bs-nav-border-color: var(--bs-paper-bg);
+}
+:root{
+    --bs-blue: #007bff;
+    --bs-indigo: #6610f2;
+    --bs-purple: #7367f0;
+    --bs-pink: #e83e8c;
+    --bs-red: #ff4c51;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ff9f43;
+    --bs-green: #28c76f;
+    --bs-teal: #20c997;
+    --bs-cyan: #00bad1;
+    --bs-black: #2f2b3d;
+    --bs-white: #fff;
+    --bs-gray: #82808b;
+    --bs-gray-dark: #595564;
+    --bs-gray-25: #fcfcfc;
+    --bs-gray-50: #f3f2f3;
+    --bs-gray-75: #eeeeef;
+    --bs-gray-100: #eaeaec;
+    --bs-gray-200: #e6e6e8;
+    --bs-gray-300: #c1bfc5;
+    --bs-gray-400: #acaab1;
+    --bs-gray-500: #97959e;
+    --bs-gray-600: #82808b;
+    --bs-gray-700: #6d6b77;
+    --bs-gray-800: #595564;
+    --bs-gray-900: #444050;
+    --bs-primary: #7367f0;
+    --bs-secondary: #808390;
+    --bs-success: #28c76f;
+    --bs-info: #00bad1;
+    --bs-warning: #ff9f43;
+    --bs-danger: #ff4c51;
+    --bs-light: #dfdfe3;
+    --bs-dark: #2f3349;
+    --bs-gray: #97959e;
+    --bs-primary-rgb: 115, 103, 240;
+    --bs-secondary-rgb: 128, 131, 144;
+    --bs-success-rgb: 40, 199, 111;
+    --bs-info-rgb: 0, 186, 209;
+    --bs-warning-rgb: 255, 159, 67;
+    --bs-danger-rgb: 255, 76, 81;
+    --bs-light-rgb: 223, 223, 227;
+    --bs-dark-rgb: 47, 51, 73;
+    --bs-gray-rgb: 151, 149, 158;
+    --bs-primary-text-emphasis: #2e2960;
+    --bs-secondary-text-emphasis: #33343a;
+    --bs-success-text-emphasis: #10502c;
+    --bs-info-text-emphasis: #004a54;
+    --bs-warning-text-emphasis: #66401b;
+    --bs-danger-text-emphasis: #661e20;
+    --bs-light-text-emphasis: #6d6b77;
+    --bs-dark-text-emphasis: #6d6b77;
+    --bs-primary-bg-subtle: #e9e7fd;
+    --bs-secondary-bg-subtle: #ebebed;
+    --bs-success-bg-subtle: #ddf6e8;
+    --bs-info-bg-subtle: #d6f4f8;
+    --bs-warning-bg-subtle: #fff0e1;
+    --bs-danger-bg-subtle: #ffe2e3;
+    --bs-light-bg-subtle: #f5f5f6;
+    --bs-dark-bg-subtle: #dedee2;
+    --bs-primary-border-subtle: #c8c4f9;
+    --bs-secondary-border-subtle: #cdcfd4;
+    --bs-success-border-subtle: #abe9c7;
+    --bs-info-border-subtle: #9ce4ed;
+    --bs-warning-border-subtle: #ffdab6;
+    --bs-danger-border-subtle: #ffb9bb;
+    --bs-light-border-subtle: #e6e6e8;
+    --bs-dark-border-subtle: #aeafb8;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-black-rgb: 47, 43, 61;
+    --bs-font-sans-serif: "Public Sans", -apple-system, blinkmacsystemfont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --bs-font-monospace: "SFMono-Regular", menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-root-font-size: 16px;
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 0.9375rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.375;
+    --bs-body-color: #6d6b77;
+    --bs-body-color-rgb: 109, 107, 119;
+    --bs-body-bg: #FFF;
+    --bs-body-bg-rgb: 248, 247, 250;
+    --bs-emphasis-color: #2f2b3d;
+    --bs-emphasis-color-rgb: 47, 43, 61;
+    --bs-secondary-color: #acaab1;
+    --bs-secondary-color-rgb: 172, 170, 177;
+    --bs-secondary-bg: #e6e6e8;
+    --bs-secondary-bg-rgb: 230, 230, 232;
+    --bs-tertiary-color: rgba(109, 107, 119, 0.5);
+    --bs-tertiary-color-rgb: 109, 107, 119;
+    --bs-tertiary-bg: #dfdfe3;
+    --bs-tertiary-bg-rgb: 223, 223, 227;
+    --bs-heading-color: #444050;
+    --bs-link-color: #7367f0;
+    --bs-link-color-rgb: 115, 103, 240;
+    --bs-link-decoration: none;
+    --bs-link-hover-color: #685dd8;
+    --bs-link-hover-color-rgb: 104, 93, 216;
+    --bs-code-color: #e83e8c;
+    --bs-highlight-color: #6d6b77;
+    --bs-highlight-bg: #ffecd9;
+    --bs-border-width: 1px;
+    --bs-border-style: solid;
+    --bs-border-color: var(--bs-gray-200);
+    --bs-border-color-translucent: rgba(47, 43, 61, 0.075);
+    --bs-border-radius: 0.375rem;
+    --bs-border-radius-sm: 0.25rem;
+    --bs-border-radius-lg: 0.5rem;
+    --bs-border-radius-xl: 0.625rem;
+    --bs-border-radius-xxl: 1rem;
+    --bs-border-radius-2xl: var(--bs-border-radius-xxl);
+    --bs-border-radius-pill: 50rem;
+    --bs-box-shadow: 0 0.1875rem 0.75rem 0 rgba(47, 43, 61, 0.14);
+    --bs-box-shadow-sm: 0 0.125rem 0.5rem 0 rgba(47, 43, 61, 0.12);
+    --bs-box-shadow-lg: 0 0.25rem 1.125rem 0 rgba(47, 43, 61, 0.16);
+    --bs-box-shadow-inset: inset 0 1px 2px rgba(47, 43, 61, 0.075);
+    --bs-focus-ring-width: 0.15rem;
+    --bs-focus-ring-opacity: 0.75;
+    --bs-focus-ring-color: rgba(109, 107, 119, 0.75);
+    --bs-form-valid-color: #28c76f;
+    --bs-form-valid-border-color: #28c76f;
+    --bs-form-invalid-color: #ff4c51;
+    --bs-form-invalid-border-color: #ff4c51
+}
+body{
+      font-family: "Public Sans", sans-serif;
+}
+.text-left{
+    text-align: left;
+}
+.card {
+    --bs-card-spacer-y: 1.5rem;
+    --bs-card-spacer-x: 1.5rem;
+    --bs-card-title-spacer-y: 0.5rem;
+    --bs-card-title-color: #444050;
+    --bs-card-subtitle-color: 
+color-mix(in sRGB, #2f2b3d 55%, #fff);
+    --bs-card-border-width: 0;
+    --bs-card-border-color: #e6e6e8;
+    --bs-card-border-radius: 0.375rem;
+    --bs-card-box-shadow: 0 0.1875rem 0.75rem 0 rgba(47, 43, 61, 0.14);
+    --bs-card-inner-border-radius: 0.375rem;
+    --bs-card-cap-padding-y: 1.5rem;
+    --bs-card-cap-padding-x: 1.5rem;
+    --bs-card-cap-bg: transparent;
+    --bs-card-cap-color: #444050;
+    --bs-card-height: ;
+    --bs-card-color: ;
+    --bs-card-bg: #FFF;
+    --bs-card-img-overlay-padding: 1.5rem;
+    --bs-card-group-margin: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    color: #6d6b77;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid #e6e6e8;
+    border-radius: 0.375rem;
+}
+.card {
+    --bs-card-hover-box-shadow: 0 0.25rem 1.125rem 0 rgba(47, 43, 61, 0.16);
+    --bs-card-border-bottom-color: var(--bs-border-color);
+    --bs-card-hover-border-color: var(--bs-border-color);
+    --bs-card-hover-border-bottom-color: var(--bs-border-color);
+    box-shadow: var(--bs-card-box-shadow);
+}
+.h-100 {
+    height: 100% !important;
+}
+
+.card-wrapper{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 48%;
+    flex: 1 1 48%;
+    max-width: 800px;
+    position: relative;
+    display: -ms-grid;
+    display: grid;
+    gap: var(--space-sm);
+    background-color: var(--bkg);
+    padding: var(--space-xl);
+    border-radius: var(--round-lg);
+    -webkit-box-shadow: .25em .3em 1em hsl(var(--muted) / .2);
+    box-shadow: .25em .3em 1em hsl(var(--muted) / .2);
+    border-top: .15em solid white;
+    border-left: .15em solid white;
+    border-right: .15em solid hsl(var(--bkg));
+    border-bottom: .15em solid hsl(var(--bkg));
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0.55rem;
+        border: 2px dashed hsl(var(--text));
+        border-radius: calc(var(--round-lg)* 0.6);
+        z-index: -1;
+    }
+}
+.icon-18px, .icon-18px::before {
+    block-size: 18px !important;
+    font-size: 18px !important;
+    inline-size: 18px !important;
+}
+.icon-base {
+    line-height: 1;
+    vertical-align: middle;
+}
+.ti {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: currentColor;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+  
+  /* Directly set the SVG in each icon class */
+  .tabler-currency-dollar {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M16.7 8A3 3 0 0 0 14 6h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1-2.7-2M12 3v3m0 12v3'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M16.7 8A3 3 0 0 0 14 6h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1-2.7-2M12 3v3m0 12v3'/%3E%3C/svg%3E");
+  }
+  
+  .tabler-chart-pie-2 {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cg fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M12 3v9h9'/%3E%3Cpath d='M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0'/%3E%3C/g%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cg fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M12 3v9h9'/%3E%3Cpath d='M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  .tabler-brand-paypal {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 13h2.5c2.5 0 5-2.5 5-5c0-3-1.9-5-5-5H7c-.5 0-1 .5-1 1L4 18c0 .5.5 1 1 1h2.8L9 14c.1-.6.4-1 1-1m7.5-5.8C19.2 8.2 20 10 20 12c0 2.5-2.5 4.5-5 4.5h-2.6l-.6 3.6a1 1 0 0 1-1 .8H8.1a.5.5 0 0 1-.5-.6l.2-1.4'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 13h2.5c2.5 0 5-2.5 5-5c0-3-1.9-5-5-5H7c-.5 0-1 .5-1 1L4 18c0 .5.5 1 1 1h2.8L9 14c.1-.6.4-1 1-1m7.5-5.8C19.2 8.2 20 10 20 12c0 2.5-2.5 4.5-5 4.5h-2.6l-.6 3.6a1 1 0 0 1-1 .8H8.1a.5.5 0 0 1-.5-.6l.2-1.4'/%3E%3C/svg%3E");
+  }
+  .badge {
+    --bs-badge-padding-x: 0.77em;
+    --bs-badge-padding-y: 0.4235em;
+    --bs-badge-font-size: 0.8667em;
+    --bs-badge-font-weight: 500;
+    --bs-badge-color: #fff;
+    --bs-badge-border-radius: 0.125rem;
+    display: inline-block;
+    padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
+    font-size: var(--bs-badge-font-size);
+    font-weight: var(--bs-badge-font-weight);
+    line-height: 1;
+    color: var(--bs-badge-color);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: var(--bs-badge-border-radius);
+}
+.badge {
+    --bs-badge-border-width: 0;
+    --bs-badge-border-color: var(--bs-primary);
+    --bs-badge-bg-color: var(--bs-primary);
+    border: var(--bs-badge-border-width) var(--bs-border-style) var(--bs-badge-border-color);
+    background-color: var(--bs-badge-bg-color);
+    --bs-badge-border-radius: 0.25rem;
+    --bs-badge-glow-shadow-color: var(--bs-primary-rgb);
+}
+.bg-label-primary {
+    background-color: 
+color-mix(in sRGB, var(--bs-paper-bg) var(--bs-bg-label-tint-amount), var(--bs-primary)) !important;
+    color: var(--bs-primary) !important;
+}
+.bg-label-info {
+    background-color: 
+color-mix(in sRGB, var(--bs-paper-bg) var(--bs-bg-label-tint-amount), var(--bs-info)) !important;
+    color: var(--bs-info) !important;
+}
+.bg-label-danger {
+    background-color: 
+color-mix(in sRGB, var(--bs-paper-bg) var(--bs-bg-label-tint-amount), var(--bs-danger)) !important;
+    color: var(--bs-danger) !important;
+}  
